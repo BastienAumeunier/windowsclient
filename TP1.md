@@ -29,7 +29,7 @@
 i7-9750H: **i7** est le nom du modèle, **9** est la version du modele, **750** est la réference du processeur et le **H** signifit que le processeur a une consommation basique.
 
 * **TrackPad:**
-    * Command: ``
+    * Command: `Get-PnpDeviceProperty`
     * Name: ``
 
 * **GPU:**
@@ -41,3 +41,27 @@ i7-9750H: **i7** est le nom du modèle, **9** est la version du modele, **750** 
     * Command: `Get-WMIObject win32_diskdrive`
         * Model disk1: `Model: ST1000LX015-1U7172` 
         * Model disk2 : `Model: KINGSTON RBUSNS8154P3256GJ3`
+    * Command: ``
+        * Disk 1:
+            * Partition 1:
+            ``` Offset: 1048576 ```
+            ```Size: 260 MB ```
+            ```Type: System```
+            * Partition 2:
+            ```Offset: 273678336```
+            ```Size: 16 MB```
+            ```Type: Reserved```
+            * Partition 3:
+            ```Offset: 290455552```
+            ```Size: 237.57 GB```
+            ```Type: Basic```
+            * Partition 4:
+            ```Offset: 255378587648```
+            ```Size: 650 MB```
+            ```Type: Recovery```
+        * Disk 2: 
+            * Partition 1: 
+            ```Offset: 1048576 ```
+            ```Size: 931.51 GB ```
+            ```Type: Basic ```
+
