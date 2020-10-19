@@ -40,7 +40,7 @@
     * Command: `Get-WMIObject win32_diskdrive`
         * Model disk1: `Model: ST1000LX015-1U7172` 
         * Model disk2 : `Model: KINGSTON RBUSNS8154P3256GJ3`
-    * Command: ``
+    * Command: `Get-Partition | fl`
         * Disk 1:
             * Partition 1:
             ``` Offset: 1048576 ```
