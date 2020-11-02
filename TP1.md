@@ -3,45 +3,45 @@
 ### Host OS
 
 * **Computer Name:**
-    * Command `hostname`
-    * Name: `BASTIEN-PORTABLE`
+    * Commande: `hostname`
+    * Nom: `BASTIEN-PORTABLE`
 
 * **OS:**
-    * Command: `Get-WMIObject win32_OperatingSystem Caption, Version, OSArchitecture`
-        * Name: `Caption: Microsoft Windows 10 Famille`
+    * Commande: `Get-WMIObject win32_OperatingSystem Caption, Version, OSArchitecture`
+        * Nom: `Caption: Microsoft Windows 10 Famille`
         * Version:  `Version: 10.0.19041`
         * System Architecture: `OSArchitecture: 64 bits`
 
 * **RAM:**
-    * Command: `Get-WMIObject win32_physicalmemory`
-        * Capacity: `Capacity: 8589934592`
+    * Commande: `Get-WMIObject win32_physicalmemory`
+        * Capacité: `Capacity: 8589934592`
         * Model: `PartNumber: HMA81GS6JJR8N-VK`
 
 ### Devices
 * **Processor:**
-    * Command: `Get-WMIObject win32_Processor`
-        * Processor Name : `Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz`
-    * Command: `WMIC CPU Get NumberOfCores,NumberOfLogicalProcessors`
-        * Core Number: `NumberOfCores 6`
-        * Processors Name: `NumberOfLogicalProcessors 12`
+    * Commande: `Get-WMIObject win32_Processor`
+        * Nom du Processeur : `Name: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz`
+    * Commande: `WMIC CPU Get NumberOfCores,NumberOfLogicalProcessors`
+        * Nombre de coeur: `NumberOfCores 6`
+        * Nombre de Processeur: `NumberOfLogicalProcessors 12`
 
 *i7-9750H: **i7** est le nom du modèle, **9** est la version du modele, **750** est la réference du processeur et le **H** signifit que le processeur a une consommation basique.*
 
 * **TrackPad:**
-    * Command: `Get-PnpDeviceProperty`
-    * Name: ``
+    * Commande: `Get-PnpDeviceProperty`
+    * Nom: ``
 
 * **GPU:**
-    * Command: `Get-WMIObject win32_VideoController`
-        * Name: `Name: NVIDIA GeForce GTX 1650`
+    * Commande: `Get-WMIObject win32_VideoController`
+        * Nom: `Nom: NVIDIA GeForce GTX 1650`
 
 
 * **Hard Disck:**
-    * Command: `Get-WMIObject win32_diskdrive`
-        * Model disk1: `Model: ST1000LX015-1U7172` 
-        * Model disk2 : `Model: KINGSTON RBUSNS8154P3256GJ3`
-    * Command: `Get-Partition | fl`
-        * Disk 1:
+    * Commande: `Get-WMIObject win32_diskdrive`
+        * Model disque 1: `Model: ST1000LX015-1U7172` 
+        * Model disque 2 : `Model: KINGSTON RBUSNS8154P3256GJ3`
+    * Commande: `Get-Partition | fl`
+        * Dique 1:
             * Partition 1:
             ``` Offset: 1048576 ```
             ```Size: 260 MB ```
@@ -58,14 +58,14 @@
             ```Offset: 255378587648```
             ```Size: 650 MB```
             ```Type: Recovery```
-        * Disk 2: 
+        * Dique 2: 
             * Partition 1: 
             ```Offset: 1048576 ```
             ```Size: 931.51 GB ```
             ```Type: Basic ```
 
 ### Users
-* Command: `wmic useraccount list full`
+* Commande: `wmic useraccount list full`
     * User 1: Administrateur
     * User 2: baume
     * User 3: DefaultAccount
@@ -76,8 +76,8 @@
     *L'utilisateur full Admin est l'user **"Administrateur"***
 
 ### Processus
-* Command: `ps`
-    * Result:
+* Commande: `ps`
+    * Resultat:
         ```
         Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id   SI ProcessName
         -------  ------    -----      -----     ------     --   -- -----------
@@ -100,17 +100,17 @@
     
 ### Network
 * **Network Card:**
-    * Command: `Get-NetAdapter | fl name`
-        * Card 1:
+    * Commande: `Get-NetAdapter | fl name`
+        * Carte 1:
             `name : Wi-Fi`
             La Carte Wifi
-        * Card 2:
+        * Carte 2:
             `name : Ethernet`
-        * Card 3: 
+        * Carte 3: 
             `name : Ethernet 2`
 * **TCP:**
-    * Command: `netstat -anob -p tcp`
-        * Result:
+    * Commande: `netstat -anob -p tcp`
+        * Resultat:
         ```
         Proto  Adresse locale         Adresse distante       État
          TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       1528
@@ -186,8 +186,8 @@
         [ProductAgentService.exe]
         ```
 * **UDP:**
-    * Command: `netstat -anob -p udp`
-        *Result: 
+    * Commande: `netstat -anob -p udp`
+        * Resultat: 
         ```
         Proto  Adresse locale         Adresse distante       État
          UDP    0.0.0.0:500            *:*                                    6376
@@ -234,3 +234,18 @@
          UDP    127.0.0.1:65395        *:*                                    12244
         [nvcontainer.exe]
         ```
+
+## III GESTION DE SOFTS
+
+*Un gestionnaire de paquets permet d'installer, desinstaller et mettre a jour tous les paquets. De plus, il garde une trace des programmes installés*
+*Il permet aussi d'utiliser seulement les paquets compatiblesentre eux*
+
+
+* **Liste des paquets** 
+    * Commande : `choco list -l`
+        * Resultat: `Chocolatey v0.10.15po`
+
+
+* **Source des paquets** 
+    * Commande : `choco source`
+        * Resultat: `chocolatey - https://chocolatey.org/api/v2/ | Priority 0|Bypass Proxy - False|Self-Service - False|Admin Only - False.`
