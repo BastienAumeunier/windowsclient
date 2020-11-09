@@ -16,7 +16,7 @@ $IP = ( `
         $_.NetAdapter.Status -ne "Disconnected" `
     } `
 ).IPv4Address.IPAddress #RECUPERATION DE L'IP
-
+###SCRIPT
 "--------------------------------------------------------------------------------------- " 
 "|   Author: Aumeunier Bastien                                                         | "
 "|    Date: 24.10.2020                                                                 | "
