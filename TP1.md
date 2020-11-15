@@ -224,10 +224,10 @@
         [nvcontainer.exe]
         ```
     
-        *Armourycrate, asus_framework et Armourysocketserver sont des programme du constructeur Asus*
-        *NVIDIA Web Helper est un service d'aide de NVIDIA qui est le constructeur de ma carte graphique*
-        *svchost est un processus qui permet de donner des fonctionnalité à d'autre application*
-        *ProductAgentService est un processus de mon antivirus Bitedefender*
+        *Armourycrate, asus_framework et Armourysocketserver sont des programme du constructeur Asus,*
+        *NVIDIA Web Helper est un service d'aide de NVIDIA qui est le constructeur de ma carte graphique,*
+        *svchost est un processus qui permet de donner des fonctionnalité à d'autre application,*
+        *ProductAgentService est un processus de mon antivirus Bitedefender,*
         *nvcontainer est un service de NVDIA qui analyse nos applications*
 ## III GESTION DE SOFTS
 
