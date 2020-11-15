@@ -28,8 +28,8 @@
 *i7-9750H: **i7** est le nom du modèle, **9** est la version du modele, **750** est la réference du processeur et le **H** signifit que le processeur a une consommation basique.*
 
 * **TrackPad:**
-    * Commande: `Get-PnpDeviceProperty`
-    * Nom: ``
+    * Commande: `Get-WmiObject win32_PointingDevice`
+    * Marque: `Manufacturer: Microsoft`
 
 * **GPU:**
     * Commande: `Get-WMIObject win32_VideoController`
@@ -272,3 +272,22 @@ Last login: Mon Nov  9 17:11:05 2020 from 192.168.120.1
     inet6 fe80::f037:50d3:d97f:17b0/64 scope link noprefixroute
        valid_lft forever preferred_lft forever
 ```
+* **Partage de fichier**
+
+Dans Powershell :
+```
+mkdir partage
+New-SmbShare -Name Partage -Path "C:\partage" -FullAccess "Tout le monde"
+```
+
+Dans la VM:
+````
+yum install -y cifs-utils
+mkdir /opt/partage
+mount -t cifs -o username=...,password=... //192.168.120.1/partage /opt/partage
+touch text.txt
+```
+
+Dans Powershell :
+    Commande: `ls`
+    Resultat: `-a----        15/11/2020     23:55              0 text.txt`
